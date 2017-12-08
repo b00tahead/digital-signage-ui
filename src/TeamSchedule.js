@@ -12,7 +12,7 @@ class TeamSchedule extends React.Component {
 
   componentDidMount() {
     const { match: { params } } = this.props;
-    fetch(`/games/${params.id}`)
+    fetch(`/api/games/${params.id}`)
     .then(results => {
       return results.json();
     }).then(data => {

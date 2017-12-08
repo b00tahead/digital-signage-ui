@@ -11,7 +11,7 @@ class Games extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/games`)
+    fetch('/api/games')
     .then(results => {
       return results.json();
     }).then(data => {
