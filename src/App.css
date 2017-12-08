@@ -1,0 +1,153 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+  background-color: transparent;
+}
+html::-webkit-scrollbar,
+html::-moz-scrollbar {
+  display: none;
+}
+#main,
+#schedules-main,
+.map-content,
+.container-fluid,
+.row,
+.sidebar,
+.staff-content {
+  height: 100%;
+}
+/* UK Athletics Schedules */
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row; /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+.page-schedules .schedule-content {
+  height: 1020px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.page-schedules .schedule-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.page-schedules .schedule-wrapper::-webkit-scrollbar{
+  display: none;
+}
+.page-schedules #schedules-grid {
+}
+.page-schedules .schedule-grid-row {
+  height: 120px;
+  padding: 20px 0;
+  border-left: 6px solid #fff;
+  border-right: 6px solid #fff;
+  border-bottom: 6px solid #fff;
+  background-color: #f2f2f2;
+}
+.page-schedules .schedule-grid-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.page-schedules .schedule-grid-row:nth-child(odd) {
+  background-color: #e5e5e5;
+}
+.page-schedules .schedule-grid-item {
+  float: left;
+}
+.page-schedules .schedule-grid-item p {
+  margin: 0;
+}
+.page-schedules .grid-sport {
+  width: 30px;
+  height: 80px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 15px;
+  color: #0033a0;
+  border-right: 2px solid #0033a0;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-left: 20px;
+}
+.page-schedules .rotate {
+  -webkit-transform: rotate(-90deg);
+}
+.page-schedules .grid-logo {
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+}
+.page-schedules .grid-logo img {
+  width: 80px;
+}
+.page-schedules .grid-game-info {
+  height: 80px;
+  width: 450px;
+  margin-left: 20px;
+  color: #262626;
+}
+.page-schedules .schedule-gametime {
+  font-size: 12px;
+  letter-spacing: .25px;
+}
+.page-schedules .day {
+  font-weight: 700;
+}
+.page-schedules .time::before {
+  content: " / ";
+}
+.page-schedules .schedule-opponent {
+  font-size: 16px;
+  color: #fff;
+}
+.page-schedules .home-away {
+  font-style: italic;
+  padding: 0 8px;
+  vertical-align: middle;
+}
+.page-schedules .home-game {
+  background-color: #0033a0;
+}
+.page-schedules .away-game {
+  background-color: #666;
+}
+.page-schedules .schedule-opponent-name {
+  color: #262626;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 23px;
+}
+.page-schedules .grid-location {
+  width: 300px;
+  height: 80px;
+  margin-left: 20px;
+  font-size: 16px;
+  overflow: hidden;
+}
+.page-schedules .provider {
+  font-size: 13px;
+}
+.page-schedules .grid-results {
+  height: 74px;
+  margin-left: 20px;
+  width: 250px;
+}
+.page-schedules .grid-results.flexcontainer {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.page-schedules .grid-results span {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 700;
+}
