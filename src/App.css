@@ -230,3 +230,21 @@ html::-moz-scrollbar
     font-weight: 700;
     font-style: italic;
 }
+
+.spinner-container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+.spinner-container .sk-spinner
+{
+    width: 100px;
+    height: 100px;
+
+    color: #0033a0;
+}

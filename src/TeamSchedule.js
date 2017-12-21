@@ -2,11 +2,14 @@ import React from 'react';
 
 import { scroller, scrollSpy, } from 'react-scroll';
 
+var Spinner = require( 'react-spinkit' );
+
 class TeamSchedule extends React.Component {
   constructor( props ) {
     super( props );
     this.state = {
-      gameResults: []
+      gameResults: [],
+      isLoading: true,
     };
   }
 
@@ -58,7 +61,7 @@ class TeamSchedule extends React.Component {
               </div>
             </div> );
           } );
-        this.setState( { gameResults: gameResults } );
+        this.setState( { gameResults: gameResults, isLoading: false } );
         scroller.scrollTo( data.games.upcomingGame );
       } );
   }
@@ -69,6 +72,10 @@ class TeamSchedule extends React.Component {
   }
 
   render() {
+    if ( this.state.isLoading ) {
+      return ( <div className="spinner-container"><Spinner name="folding-cube"/></div> );
+    }
+
     return ( <div id="schedules-main" className="App">
       <div className="container-fluid">
         <div className="row">
